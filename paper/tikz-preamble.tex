@@ -1,0 +1,40 @@
+\usepackage{tikz}
+\usetikzlibrary{%
+  arrows,
+  backgrounds,
+  calc,
+  decorations.markings,
+  decorations.pathreplacing,
+  fit,
+  matrix,
+  patterns,
+  positioning,
+  shapes,
+  shapes.multipart,
+}
+
+% Ref: https://tex.stackexchange.com/a/62273
+\usepackage{pgfplots}
+\makeatletter
+\newenvironment{customlegend}[1][]{%
+  \begingroup
+  \csname pgfplots@init@cleared@structures\endcsname
+  \pgfplotsset{#1}
+  \def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+  \def\addlegendentry{\csname pgfplots@addlegendentry\endcsname}
+}{%
+  \csname pgfplots@createlegend\endcsname
+  \endgroup
+}%
+\makeatother
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\let\emptyset\varnothing%
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\usepackage{bm}
+\usepackage{fancynum}
+\setfnumgsym{\,}
+\usepackage{array}

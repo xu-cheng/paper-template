@@ -2,8 +2,8 @@
 % Template:
 %   - name: mybeamer
 %   - category: beamer
-%   - date: 2019-10-30 15:42:37 +0800
-%   - commit: 27e3671fdc55c0fbeeaca88d6a66db247bd522f7
+%   - date: 2019-11-06 15:37:12 +0800
+%   - commit: 71a9f48dd8517d3e9ba9ff242cca3e0c0da38084
 %
 % Copyright (C) 2014-2019 by Cheng XU <copyright@xuc.me>
 %
@@ -122,8 +122,8 @@
         Template.name={mybeamer},
         Template.author={Cheng XU <copyright@xuc.me>},
         Template.category={beamer},
-        Template.date={2019-10-30 15:42:37 +0800}, % chktex 8
-        Template.commit={27e3671fdc55c0fbeeaca88d6a66db247bd522f7},
+        Template.date={2019-11-06 15:37:12 +0800}, % chktex 8
+        Template.commit={71a9f48dd8517d3e9ba9ff242cca3e0c0da38084},
         Template.url={https://github.com/xu-cheng/latex},
     },
     pdfcenterwindow=true,
@@ -212,3 +212,27 @@
 
 % https://tex.stackexchange.com/a/226939/16996
 \resetcounteronoverlays{algocf}
+
+\RequirePackage{tikz}
+\RequirePackage{tikzpagenodes}
+\usetikzlibrary{%
+  arrows,
+  backgrounds,
+  calc,
+  decorations.markings,
+  decorations.pathreplacing,
+  fit,
+  matrix,
+  patterns,
+  positioning,
+  shapes,
+  shapes.multipart,
+}
+
+\newcommand*\circled[1]{%
+  \scalebox{0.8}{%
+    \tikz[baseline=(char.base)]{%
+      \node[shape=circle,fill,inner sep=2pt] (char) {\textcolor{white}{#1}};
+    }
+  }
+}

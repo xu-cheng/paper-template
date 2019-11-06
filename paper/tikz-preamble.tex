@@ -13,6 +13,14 @@
   shapes.multipart,
 }
 
+\newcommand*\circled[1]{%
+  \scalebox{0.8}{%
+    \tikz[baseline=(char.base)]{%
+      \node[shape=circle,fill,inner sep=2pt] (char) {\textcolor{white}{#1}};
+    }
+  }
+}
+
 % Ref: https://tex.stackexchange.com/a/62273
 \usepackage{pgfplots}
 \makeatletter

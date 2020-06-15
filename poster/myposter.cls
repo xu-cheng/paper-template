@@ -2,10 +2,10 @@
 % Template:
 %   - name: myposter
 %   - category: poster
-%   - date: 2019-10-30 15:42:37 +0800
-%   - commit: 27e3671fdc55c0fbeeaca88d6a66db247bd522f7
+%   - date: 2020-06-14 22:17:55 -0700
+%   - commit: d9db19d064476beff8c03d5e1a1d9a52cb707162
 %
-% Copyright (C) 2014-2019 by Cheng XU <copyright@xuc.me>
+% Copyright (C) 2014-2020 by Cheng XU <copyright@xuc.me>
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -82,10 +82,16 @@
 \RequirePackage{mathrsfs}
 \RequirePackage{latexsym}
 \RequirePackage{bm}
+
 \RequirePackage{fancynum}
 \setfnumgsym{\,}
-\RequirePackage[ruled,vlined]{algorithm2e}
+
+% Algorithm
+\RequirePackage[ruled,vlined,linesnumbered]{algorithm2e}
 \SetVlineSkip{0pt}
+\SetAlCapNameFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlFnt{\small}
 
 % Caption related packages
 \RequirePackage{caption}
@@ -121,8 +127,8 @@
         Template.name={myposter},
         Template.author={Cheng XU <copyright@xuc.me>},
         Template.category={poster},
-        Template.date={2019-10-30 15:42:37 +0800}, % chktex 8
-        Template.commit={27e3671fdc55c0fbeeaca88d6a66db247bd522f7},
+        Template.date={2020-06-14 22:17:55 -0700}, % chktex 8
+        Template.commit={d9db19d064476beff8c03d5e1a1d9a52cb707162},
         Template.url={https://github.com/xu-cheng/latex},
     },
     plainpages=false,
@@ -162,9 +168,9 @@
 }
 
 % Utility function
-\RequirePackage{soul} % offers \hl
+\RequirePackage{soul} % offers \hl, \texthl
+\RequirePackage{todonotes} % offers \todo
 \newcommand*{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
-\newcommand{\todo}[1]{{\color{red} TODO:\ #1}}
 
 \RequirePackage[export]{adjustbox}
 

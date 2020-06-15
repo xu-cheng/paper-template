@@ -2,10 +2,10 @@
 % Template:
 %   - name: mybeamer
 %   - category: beamer
-%   - date: 2019-11-06 15:37:12 +0800
-%   - commit: 71a9f48dd8517d3e9ba9ff242cca3e0c0da38084
+%   - date: 2020-06-14 22:17:55 -0700
+%   - commit: d9db19d064476beff8c03d5e1a1d9a52cb707162
 %
-% Copyright (C) 2014-2019 by Cheng XU <copyright@xuc.me>
+% Copyright (C) 2014-2020 by Cheng XU <copyright@xuc.me>
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -87,10 +87,16 @@
 \RequirePackage{amsfonts}
 \RequirePackage{mathrsfs}
 \RequirePackage{latexsym}
+
 \RequirePackage{fancynum}
 \setfnumgsym{\,}
-\RequirePackage[ruled,vlined]{algorithm2e}
+
+% Algorithm
+\RequirePackage[ruled,vlined,linesnumbered]{algorithm2e}
 \SetVlineSkip{0pt}
+\SetAlCapNameFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlFnt{\small}
 
 \RequirePackage{subcaption}
 
@@ -122,8 +128,8 @@
         Template.name={mybeamer},
         Template.author={Cheng XU <copyright@xuc.me>},
         Template.category={beamer},
-        Template.date={2019-11-06 15:37:12 +0800}, % chktex 8
-        Template.commit={71a9f48dd8517d3e9ba9ff242cca3e0c0da38084},
+        Template.date={2020-06-14 22:17:55 -0700}, % chktex 8
+        Template.commit={d9db19d064476beff8c03d5e1a1d9a52cb707162},
         Template.url={https://github.com/xu-cheng/latex},
     },
     pdfcenterwindow=true,
@@ -154,9 +160,10 @@
 
 
 % Utility function
-\RequirePackage{soul} % offers \hl
+\RequirePackage{soul} % offers \hl, \texthl
+\RequirePackage{todonotes} % offers \todo
+\presetkeys{todonotes}{inline}{}
 \newcommand*{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
-\newcommand{\todo}[1]{{\color{red} TODO:\ #1}}
 
 \RequirePackage[export]{adjustbox}
 

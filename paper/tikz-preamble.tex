@@ -40,12 +40,16 @@
 \makeatother
 
 \usepackage{amsmath}
-\usepackage{amssymb}
+% not load amssymb for acmart
+\ifcsname Bbbk\endcsname\else
+  \usepackage{amssymb}
+\fi
 \let\emptyset\varnothing%
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
 \usepackage{latexsym}
 \usepackage{bm}
+
 \usepackage{fancynum}
 \setfnumgsym{\,}
 
@@ -54,3 +58,4 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{threeparttable}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}

@@ -11,13 +11,36 @@
 % \AtBeginDocument{\fancyhead{}}
 
 % vldb
-% \documentclass{vldb}
-% \vldbTitle{}
-% \vldbAuthors{}
-% \vldbDOI{https://doi.org/10.14778/xxxxxxx.xxxxxxx}
-% \vldbVolume{xx}
-% \vldbNumber{xx}
-% \vldbYear{20xx}
+% \PassOptionsToPackage{table,dvipsnames}{xcolor}
+% \documentclass[sigconf, noacm, natbib=false]{acmart}
+% %% The following content must be adapted for the final version
+% % paper-specific
+% \newcommand\vldbdoi{XX.XX/XXX.XX}
+% \newcommand\vldbpages{XXX-XXX}
+% % issue-specific
+% \newcommand\vldbvolume{14}
+% \newcommand\vldbissue{1}
+% \newcommand\vldbyear{2020}
+% % should be fine as it is
+% \newcommand\vldbauthors{\authors}
+% \newcommand\vldbtitle{\shorttitle}
+% \AtBeginDocument{\fancyhead{}}
+% \apptocmd\maketitle{%
+% %%% do not modify the following VLDB block %%
+% %%% VLDB block start %%%
+% \begingroup\small\noindent\raggedright\textbf{PVLDB Reference Format:}\\
+% \vldbauthors. \vldbtitle. PVLDB, \vldbvolume(\vldbissue): \vldbpages, \vldbyear.\\
+% \href{https://doi.org/\vldbdoi}{doi:\vldbdoi}
+% \endgroup
+% \begingroup
+% \renewcommand\thefootnote{}\footnote{\noindent
+% This work is licensed under the Creative Commons BY-NC-ND 4.0 International License. Visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/} to view a copy of this license. For any use beyond those covered by this license, obtain permission by emailing \href{mailto:info@vldb.org}{info@vldb.org}. Copyright is held by the owner/author(s). Publication rights licensed to the VLDB Endowment. \\
+% \raggedright Proceedings of the VLDB Endowment, Vol. \vldbvolume, No. \vldbissue\ %
+% ISSN 2150-8097. \\
+% \href{https://doi.org/\vldbdoi}{doi:\vldbdoi} \\
+% }\addtocounter{footnote}{-1}\endgroup
+% %%% VLDB block end %%%
+% }{}{}
 
 \input{preamble.tex}%
 \addbibresource{ref.bib}%

@@ -13,6 +13,11 @@
 \SetAlCapNameFnt{\small}
 \SetAlCapFnt{\small}
 \SetAlFnt{\small}
+% Ref: https://tex.stackexchange.com/a/494649/16996
+\makeatletter
+\patchcmd\algocf@Vline{\vrule}{\vrule \kern-0.4pt}{}{}
+\patchcmd\algocf@Vsline{\vrule}{\vrule \kern-0.4pt}{}{}
+\makeatother
 
 \let\proof\relax
 \let\endproof\relax

@@ -2,8 +2,8 @@
 % Template:
 %   - name: myreviewresponse
 %   - category: article
-%   - date: 2020-06-14 22:17:55 -0700
-%   - commit: d9db19d064476beff8c03d5e1a1d9a52cb707162
+%   - date: 2020-09-07 13:28:23 -0700
+%   - commit: 2f5aaec1b381259aa3951a8e6fd5c3b77497478f
 %
 % Copyright (C) 2014-2020 by Cheng XU <copyright@xuc.me>
 %
@@ -287,15 +287,18 @@
 \newcounter{@reviewer}
 \newcounter{@comment}[@reviewer]
 
+\define@cmdkey{reviewer}{number}{}
+\define@cmdkey{reviewer}{note}{}
 \NewDocumentCommand\newreviewer{o}{%
     {
+        \IfValueT{#1}{\setkeys{reviewer}{#1}}%
         \large%
         \vskip\topskip%
         \needspace{8\baselineskip}%
-        \refstepcounter{@reviewer}%
+        \ifthenelse{\isundefined{\cmdKV@reviewer@number}}{\refstepcounter{@reviewer}}{\setcounter{@reviewer}{\cmdKV@reviewer@number}}%
         \phantomsection%
         \bookmark[dest=\@currentHref,rellevel=1,keeplevel]{Reviewer \arabic{@reviewer}}%
-        \noindent\bfseries\underline{Reviewer \arabic{@reviewer}\IfValueT{#1}{ #1}}%
+        \noindent\bfseries\underline{Reviewer \arabic{@reviewer}\ifthenelse{\isundefined{\cmdKV@reviewer@note}}{}{ (\cmdKV@reviewer@note)}}%
         \protected@edef\@currentlabelname{Reviewer \arabic{@reviewer}}%
         \par%
         \vskip\topskip%

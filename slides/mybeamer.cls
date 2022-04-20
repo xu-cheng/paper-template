@@ -2,10 +2,10 @@
 % Template:
 %   - name: mybeamer
 %   - category: beamer
-%   - date: 2020-06-14 22:17:55 -0700
-%   - commit: d9db19d064476beff8c03d5e1a1d9a52cb707162
+%   - date: 2022-04-19 23:46:01 -0700
+%   - commit: b001f49b99b9f71810105785c91544e98fe40b77
 %
-% Copyright (C) 2014-2020 by Cheng XU <copyright@xuc.me>
+% Copyright (C) 2014-2022 by Cheng XU <copyright@xuc.me>
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -89,7 +89,6 @@
 \RequirePackage{latexsym}
 
 \RequirePackage{fancynum}
-\setfnumgsym{\,}
 
 % Algorithm
 \RequirePackage[ruled,vlined,linesnumbered]{algorithm2e}
@@ -107,7 +106,7 @@
 
 % Table related packages
 \RequirePackage{array}
-\RequirePackage{tabu}
+\RequirePackage{tabularray}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -128,8 +127,8 @@
         Template.name={mybeamer},
         Template.author={Cheng XU <copyright@xuc.me>},
         Template.category={beamer},
-        Template.date={2020-06-14 22:17:55 -0700}, % chktex 8
-        Template.commit={d9db19d064476beff8c03d5e1a1d9a52cb707162},
+        Template.date={2022-04-19 23:46:01 -0700}, % chktex 8
+        Template.commit={b001f49b99b9f71810105785c91544e98fe40b77},
         Template.url={https://github.com/xu-cheng/latex},
     },
     pdfcenterwindow=true,

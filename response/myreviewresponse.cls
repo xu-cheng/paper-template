@@ -2,10 +2,10 @@
 % Template:
 %   - name: myreviewresponse
 %   - category: article
-%   - date: 2020-09-07 13:28:23 -0700
-%   - commit: 2f5aaec1b381259aa3951a8e6fd5c3b77497478f
+%   - date: 2022-04-19 23:46:01 -0700
+%   - commit: b001f49b99b9f71810105785c91544e98fe40b77
 %
-% Copyright (C) 2014-2020 by Cheng XU <copyright@xuc.me>
+% Copyright (C) 2014-2022 by Cheng XU <copyright@xuc.me>
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -79,7 +79,6 @@
 \RequirePackage{bm}
 
 \RequirePackage{fancynum}
-\setfnumgsym{\,}
 
 % Algorithm
 \RequirePackage[ruled,vlined,linesnumbered]{algorithm2e}
@@ -99,7 +98,7 @@
 
 % Table related packages
 \RequirePackage{array}
-\RequirePackage{tabu}
+\RequirePackage{tabularray}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -280,6 +279,9 @@
     \par%
     \vskip 1.5ex%
 }
+
+% Ref: hyperref doc "If the final PDF file is going to be merged with another file,"
+\renewcommand*{\HyperDestNameFilter}[1]{\jobname-#1}
 
 \RequirePackage{mdframed}
 \RequirePackage{needspace}

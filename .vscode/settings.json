@@ -4,7 +4,6 @@
   "latex-workshop.chktex.enabled": true,
   "latex-workshop.message.badbox.show": false,
   // Grammarly
-  "grammarly.autoActivate": true,
   "grammarly.domain": "academic",
   // cSpell
   "cSpell.language": "en,en-US",

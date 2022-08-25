@@ -24,10 +24,14 @@
 % % should be fine as it is
 % \newcommand\vldbauthors{\authors}
 % \newcommand\vldbtitle{\shorttitle}
-% \AtBeginDocument{\fancyhead{}}
+% % leave empty if no availability url should be set
+% \newcommand\vldbavailabilityurl{URL_TO_YOUR_ARTIFACTS}
+% % whether page numbers should be shown or not, use 'plain' for review versions, 'empty' for camera ready
+% \newcommand\vldbpagestyle{plain}
 % \apptocmd\maketitle{%
 % %%% do not modify the following VLDB block %%
 % %%% VLDB block start %%%
+% \pagestyle{\vldbpagestyle}
 % \begingroup\small\noindent\raggedright\textbf{PVLDB Reference Format:}\\
 % \vldbauthors. \vldbtitle. PVLDB, \vldbvolume(\vldbissue): \vldbpages, \vldbyear.\\
 % \href{https://doi.org/\vldbdoi}{doi:\vldbdoi}
@@ -39,6 +43,15 @@
 % ISSN 2150-8097. \\
 % \href{https://doi.org/\vldbdoi}{doi:\vldbdoi} \\
 % }\addtocounter{footnote}{-1}\endgroup
+% %%% VLDB block end %%%
+% %%% do not modify the following VLDB block %%
+% %%% VLDB block start %%%
+% \ifdefempty{\vldbavailabilityurl}{}{
+% \vspace{.3cm}
+% \begingroup\small\noindent\raggedright\textbf{PVLDB Artifact Availability:}\\
+% The source code, data, and/or other artifacts have been made available at \url{\vldbavailabilityurl}.
+% \endgroup
+% }
 % %%% VLDB block end %%%
 % }{}{}
 

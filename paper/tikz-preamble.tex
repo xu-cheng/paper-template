@@ -17,10 +17,8 @@
 }
 
 \newcommand*\circled[1]{%
-  \scalebox{0.8}{%
-    \tikz[baseline=(char.base)]{%
-      \node[shape=circle,fill,inner sep=2pt] (char) {\textcolor{white}{#1}};
-    }
+  \tikz[baseline=(char.base)]{%
+    \node[shape=circle,fill,inner sep=2pt,scale=0.8] (char) {\textcolor{white}{#1}};
   }
 }
 
